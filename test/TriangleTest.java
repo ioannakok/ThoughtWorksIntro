@@ -28,5 +28,27 @@ public class TriangleTest {
                 triangle.drawRightTriangle(5));
     }
 
+    @Test
+    void drawIsoscelesTriangleInOneLine() {
+        assertEquals("*", triangle.drawIsoscelesTriangle(1));
+    }
+
+    @Test
+    void drawIsoscelesTriangleInTwoLines() {
+        assertEquals(" *\n***", triangle.drawIsoscelesTriangle(2));
+    }
+
+    @Test
+    void drawIsoscelesTriangleWithThreeLines() {
+        assertEquals("  *\n ***\n*****",
+                triangle.drawIsoscelesTriangle(3));
+    }
+
+    @Test
+    void drawIsoscelesTriangleWithFiveLines() {
+        assertEquals("    *\n   ***\n  *****\n *******\n*********",
+                triangle.drawIsoscelesTriangle(5));
+    }
+
 
 }
