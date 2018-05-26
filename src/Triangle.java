@@ -9,7 +9,6 @@ public class Triangle {
             if(i != n - 1)
                 triangle.append("\n");
         }
-
         return triangle.toString();
     }
 
@@ -30,4 +29,20 @@ public class Triangle {
         return triangle.toString();
     }
 
+    public String drawUpsideDownIsoscelesTriangle(int height) {
+        StringBuilder triangle = new StringBuilder();
+
+        for(int row = height; row > 0; row--) {
+            for(int space = 0; space < height - row; space++)
+                triangle.append(" ");
+
+            for(int width = 1; width <= (row * 2) - 1; width++)
+                triangle.append("*");
+
+            if(row != 1)
+                triangle.append("\n");
+        }
+
+        return triangle.toString();
+    }
 }

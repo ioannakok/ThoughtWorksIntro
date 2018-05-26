@@ -50,5 +50,22 @@ public class TriangleTest {
                 triangle.drawIsoscelesTriangle(5));
     }
 
+    @Test
+    void drawUpsideDownIsoscelesTriangleWithOneLine() {
+        assertEquals("*", triangle.drawUpsideDownIsoscelesTriangle(1));
+    }
+
+    @Test
+    void drawUpsideDownIsoscelesTriangleWithTwoLines() {
+        assertEquals("***\n *", triangle.drawUpsideDownIsoscelesTriangle(2));
+    }
+
+    @Test
+    void  drawUpsideDownIsoscelesTriangleWithFiveLines() {
+        assertEquals("*********\n *******\n  *****\n   ***\n    *",
+                triangle.drawUpsideDownIsoscelesTriangle(5));
+    }
+
+
 
 }
