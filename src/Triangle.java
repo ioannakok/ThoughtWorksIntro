@@ -13,24 +13,22 @@ public class Triangle {
     }
 
     public String drawIsoscelesTriangle(int height) {
-
         return drawTriangle(height, false);
     }
 
     public String drawUpsideDownIsoscelesTriangle(int height) {
-
         return drawTriangle(height, true);
     }
 
     private String drawTriangle(int height, boolean isUpsideDown) {
         StringBuilder triangle = new StringBuilder();
-        int maxSpaces = height - 1;
+        int maxNumberOfSpaces = height - 1;
         int maxWidth = (height * 2) - 1;
 
         for(int row = 0; row < height; row++) {
 
-            int spaceEndPoint = (isUpsideDown) ? row + 1 : maxSpaces - row;
             int spaceStartPoint = (isUpsideDown) ? 1 : 0;
+            int spaceEndPoint = (isUpsideDown) ? row + 1 : maxNumberOfSpaces - row;
             int asteriskStartPoint = (isUpsideDown) ? row : height - row;
             int asteriskEndPoint = (isUpsideDown) ? maxWidth - row - 1 : height + row;
 
@@ -43,7 +41,7 @@ public class Triangle {
                     triangle.append("*");
             }
 
-            if(row != maxSpaces)
+            if(row != maxNumberOfSpaces)
                 triangle.append("\n");
         }
 

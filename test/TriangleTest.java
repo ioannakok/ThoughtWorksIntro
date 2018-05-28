@@ -65,7 +65,4 @@ public class TriangleTest {
         assertEquals("*********\n *******\n  *****\n   ***\n    *",
                 triangle.drawUpsideDownIsoscelesTriangle(5));
     }
-
-
-
 }
