@@ -14,37 +14,38 @@ public class DiamondTest {
 
     @Test
     void drawDiamondWithDiagonalOne() {
-        assertEquals("*", diamond.drawDiamond(1));
+
+        assertEquals("*\n", diamond.drawDiamond(1));
     }
 
     @Test
     void drawDiamondWithDiagonalFive() {
-        assertEquals("  *\n ***\n*****\n ***\n  *",
+        assertEquals("  *\n ***\n*****\n ***\n  *\n",
                 diamond.drawDiamond(3));
     }
 
     @Test
     void drawDiamondWithDiagonalNine() {
         assertEquals("    *\n   ***\n  *****\n *******\n*********\n " +
-                        "*******\n  *****\n   ***\n    *",
+                        "*******\n  *****\n   ***\n    *\n",
                 diamond.drawDiamond(5));
     }
 
     @Test
     void drawDiamondWithNameWithDiagonalOne() {
-        assertEquals("Ioanna",
+        assertEquals("Ioanna\n",
                 diamond.drawDiamondWithAName(1, "Ioanna"));
     }
 
     @Test
     void drawDiamondWithNameWithDiagonalTwo() {
-        assertEquals("*\nIoanna\n*",
+        assertEquals("*\nIoanna\n*\n",
                 diamond.drawDiamondWithAName(2, "Ioanna"));
     }
 
     @Test
     void drawDiamondWithNameWithDiagonalThree() {
-        assertEquals(" *\n***\nIoanna\n***\n *",
+        assertEquals(" *\n***\nIoanna\n***\n *\n",
                 diamond.drawDiamondWithAName(3, "Ioanna"));
     }
 }

@@ -12,8 +12,7 @@ public class Triangle {
         return triangle.toString();
     }
 
-    public String drawIsoscelesTriangle(int height) {
-        return drawTriangle(height, false);
+    public String drawIsoscelesTriangle(int height) { return drawTriangle(height, false);
     }
 
     public String drawUpsideDownIsoscelesTriangle(int height) {
@@ -41,7 +40,6 @@ public class Triangle {
                     triangle.append("*");
             }
 
-            if(row != maxNumberOfSpaces)
                 triangle.append("\n");
         }
 
