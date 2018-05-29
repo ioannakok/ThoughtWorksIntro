@@ -29,4 +29,22 @@ public class DiamondTest {
                         "*******\n  *****\n   ***\n    *",
                 diamond.drawDiamond(5));
     }
+
+    @Test
+    void drawDiamondWithNameWithDiagonalOne() {
+        assertEquals("Ioanna",
+                diamond.drawDiamondWithAName(1, "Ioanna"));
+    }
+
+    @Test
+    void drawDiamondWithNameWithDiagonalTwo() {
+        assertEquals("*\nIoanna\n*",
+                diamond.drawDiamondWithAName(2, "Ioanna"));
+    }
+
+    @Test
+    void drawDiamondWithNameWithDiagonalThree() {
+        assertEquals(" *\n***\nIoanna\n***\n *",
+                diamond.drawDiamondWithAName(3, "Ioanna"));
+    }
 }

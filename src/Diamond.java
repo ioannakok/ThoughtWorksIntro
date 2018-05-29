@@ -9,4 +9,8 @@ public class Diamond {
                 triangle.drawUpsideDownIsoscelesTriangle(n).substring(maxWidth);
     }
 
+    public String drawDiamondWithAName(int n, String name) {
+        return (n == 1) ? name: triangle.drawIsoscelesTriangle(n - 1) + "\n" +
+                name + "\n" + triangle.drawUpsideDownIsoscelesTriangle(n - 1);
+    }
 }
